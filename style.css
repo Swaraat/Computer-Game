@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Styling for the body, including background color and overflow property */
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.gamecontainer {
+    /* Styling for the game container, including background image and size */
+
+    /* background-image: url(pics/background.jpg); */
+    background-image: url(https://i.postimg.cc/J46k5qQd/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 117vw 53vw;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Styling for the player character and obstacle elements */
+
+.meu {
+    /* Styling for the player character with background image, size, and position */
+
+    /* background-image: url(pics/character-removebg-preview-removebg-preview.png); */
+    background-image: url(https://i.postimg.cc/Hkr7ZyZW/character-removebg-preview-removebg-preview.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    width: 92px;
+    height: 200px;
+    position: absolute;
+    bottom: -6vh;
+    left: 20px;
+    border: 1px solid y;
+}
+
+.obstacle {
+    /* Styling for the obstacle with background image, size, and position */
+
+    width: 92px;
+    height: 144px;
+    /* background-image: url(pics/mewtwo-mega-y-removebg-preview-removebg-preview.png); */
+    background-image: url(https://i.postimg.cc/T3B5Z3FV/mewtwo-mega-y-removebg-preview-removebg-preview.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 2vh;
+    left: 80vw;
+}
+
+/* Animation for player character movement and obstacle appearance */
+
+.animatemeu {
+
+    animation: meu 1s linear;
+}
+
+.obsticalhero {
+    animation: obsticalhero 7s linear infinite;
+}
+
+/* Keyframes for player character movement animation */
+@keyframes meu {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 500px;
+        /* Added 'bottom' property here */
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+/* Keyframes for obstacle animation */
+@keyframes obsticalhero {
+    0% {
+
+
+        left: 100vw;
+    }
+
+    100% {
+        left: -5vw;
+    }
+}
+
+/* Styling for the game over text, initially hidden */
+
+.gameover {
+    visibility: hidden;
+    font-size: 4rem;
+    text-align: center;
+    color: aliceblue;
+
+}
+
+/* Styling for the score display */
+#scorecount {
+    font-size: 2rem;
+    color: rgb(202, 129, 129);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.board {
+    width: 100vw;
+    height: 55vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.board-inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:1300px) {
+    .gamecontainer {
+        background-size: cover;
+    }
+}
+
+#play {
+    width: 10vw;
+    height: 5vh;
+    font-size: larger;
+    border-radius: 30px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    visibility: visible;
+}
+
+#play:hover {
+    cursor: pointer;
+}
